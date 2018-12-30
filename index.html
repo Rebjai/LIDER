@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LIDER | Lasallistas Inviertiendo en Disciplina, Educacion y Respeto</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', "Helvetica Neue", Helvetica, sans-serif;
+            color: white;
+
+        }
+
+        /* critical css */
+        header {
+            background-color: #157daa;
+            
+        }
+
+        nav {
+            width: 100%;
+            height: 3em;
+            background-color: rgba(0, 0, 0, 0.666);
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+        }
+
+        nav ul {
+            height: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+        }
+
+        nav li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li:hover a {
+            color: #666;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav a:active {
+            color: #666;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="logo grid">
+            <img id="logo-img" src="./images/lider logo vergas vino alv sin fondo.png" alt="LIDER" width="150px">
+            <div class="logo-title">LIDER</div>
+            <div class="logo-text text-center">Lasallistas Inviertiendo en Disciplina, Educacion y Respeto</div>
+        </div>
+
+        <!-- navbar inside header-->
+        <nav>
+            <ul>
+                <li>
+                    <a href="#about">¿QUÉ ES LIDER?</a>
+                </li>
+                <li>
+                    <a href="#get-in">Plataforma Interactiva</a>
+                </li>
+                <li>
+                    <a href="#contact">Contáctanos</a>
+                </li>
+                <li>
+                    <a href="#portfolio">Social media </a>
+                    <!-- https://www.facebook.com/CUEFMM/ -->
+                </li>
+
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- about -->
+    <!-- with slideshow together? -->
+    <main id="about">
+        <div class="main-banner" id="main-banner">
+
+
+            <div class="banner-text container grid">
+                <h1>Qué es <span id="lider">LIDER</span> ?</h1>
+                <p>LIDER nace con el fin de ofrecer una educación integral al estudiante de medicina de la Universidad
+                    LaSalle. Estamos convencidos que un estudiante sano, que confía en los conocimientos que le imparte
+                    su facultad y que está orgulloso de portar el escudo de la universidad, tendrá la capacidad de
+                    aprovechar las herramientas educativas que le brinda la facultad y por ende se lograrán mejores
+                    resultados académicos y se compartirá el enfoque humanista que tanto caracteriza al médico
+                    lasallista.</p>
+                <div class="banner-buttons">
+                    <button>Propuestas</button>
+                    <button>Conócenos</button>
+                </div>
+            </div>
+
+            <div class="img-ban" id="imgban3">
+
+            </div>
+            <div class="img-ban" id="imgban2">
+
+            </div>
+            <div class="img-ban" id="imgban1">
+
+            </div>
+        </div>
+    </main>
+
+    <!-- get in -->
+
+    <section id="get-in">
+        <div id="platform" class="box-container black-bg grid">
+            <div class="text-center full-height flex-col flex-justify-evenly flex-align-center">
+                <h2>PLATAFORMA INTERACTIVA</h2>
+                <p>Comprometidos con la excelencia.</p>
+                <button>ingresa aquí</button>
+            </div>
+            <img src="./images/estetos.webp" alt="" id="platform-image" class="full-height">
+        </div>
+    </section>
+    <!-- separator 1-->
+    <div id="sep1" class="separator">
+        <div id="quote" class="box-container blue-bg">
+            <img src="./images/lider circulo.webp" alt="" id="quote-img">
+            <blockquote>
+                <q>El comienzo es la parte más importante de todo trabajo</q>
+                <cite>Platón</cite>
+            </blockquote>
+        </div>
+    </div>
+    <!-- contact -->
+    <section id="contact" class="black-bg">
+        <div id="contact-box" class="red-bg">
+            <div class="contact-form">
+                <h2>Contáctanos</h2>
+                <form action="none" class="flex-col">
+                    <div class="form-required">
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre *">
+                        <input type="text" name="e-mail" id="e-mail" placeholder="E-mail *">
+                    </div>
+                    <div class="form-optional flex-col">
+                        <input type="text" name="telefono" id="telefono" placeholder="Teléfono">
+                        <input type="text" name="direccion" id="direccion" placeholder="dirección">
+                        <input type="text" name="asunto" id="asunto" placeholder="asunto">
+                    </div>
+                    <textarea name="message" id="message" placeholder="Mensaje" cols="30" rows="10"></textarea>
+                    <button>Enviar</button>
+                </form>
+
+            </div>
+
+            <img src="./images/estetos.webp" alt="Disciplina">
+        </div>
+
+
+
+    </section>
+    <!-- separator 2 -->
+    <!-- footer -->
+    <script src="./slideshow.js"></script>
+</body>
+
+</html>
