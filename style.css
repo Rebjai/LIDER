@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-color: #f3f3f3;
+    background-color: #f0f0f0;
     overflow-x: hidden;
 }
 form{
@@ -34,6 +34,11 @@ button:hover {
 blockquote {
     display: flex;
     flex-direction: column;
+}
+
+footer{
+    /* min-height: em; */
+    padding: 2em 0 0 0;
 }
 
 input, textarea{
@@ -123,7 +128,7 @@ section {
 
 .box-container {
     width: 90%;
-    margin: 0 auto;
+    margin: 5% auto;
 }
 
 .container {
@@ -174,7 +179,7 @@ section {
 .logo {
     width: 35%;
     margin: 0 auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     grid-template-columns: 1fr 2fr;
     grid-template-areas: "logoIMG ." "logoIMG .";
     justify-items: center;
@@ -193,7 +198,7 @@ section {
 }
 
 #contact-box {
-    width: 80vw;
+    /* width: 80vw; */
     display: flex;
     flex-direction: column;
 }
@@ -227,6 +232,20 @@ section {
     background-image: url(./images/mri.webp);
     min-height: 300px;
 }
+#social{
+    margin-bottom: 1.5em;
+}
+#social img{
+    margin: 0 .5em;
+}
+#social-media img{
+    margin: 1em;
+}
+#social-media img:hover{
+
+    transform: scale(1.15);
+}
+
 
 #quote {
     display: flex;
