@@ -145,7 +145,6 @@ section {
         height: fit-content;
     }
     .banner-buttons{
-        flex-direction: row;
-        
+        flex-direction: row !important;
     }
 }
