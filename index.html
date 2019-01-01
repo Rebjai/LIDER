@@ -10,113 +10,174 @@
     <link rel="stylesheet" href="style.css">
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', "Helvetica Neue", Helvetica, sans-serif;
-            color: white;
-
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', "Helvetica Neue", Helvetica, sans-serif;
+        color: white;
         }
 
-        /* critical css */
         header {
             background-color: #157daa;
-            
-        }
 
-        nav {
-            width: 100%;
-            height: 3em;
-            background-color: rgba(0, 0, 0, 0.666);
-            justify-content: center;
-            align-items: center;
+        }
+        #slogan{
+            padding: 0 5vw;
+        }
+        #social-media img{
+            margin: 1em;
+        }
+        nav{
+            background-color: rgba(149, 2, 2, 0.794);
             position: sticky;
+            /* position: -webkit-sticky; */
+            top: 0;
+            padding: .5em 0;
+            z-index: 9999;
         }
 
-        nav ul {
-            height: 100%;
-            list-style: none;
+        nav h1{
+            display: block;
+            margin: 0 auto;
+        }
+        nav h1:hover + ul, nav h1 + ul:hover {
+            max-height: 300px;
+        }
+
+        nav ul{
             display: flex;
+            flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-            align-content: center;
+            list-style: none;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 200ms;
         }
-
-        nav li {
-            height: 100%;
-            display: flex;
-            align-items: center;
+        nav ul li{
+            width: 45%;
+            text-align: center;
+            padding: .5em 0;
         }
-
-        nav ul li:hover a {
-            color: #666;
-        }
-
-        nav a {
+        nav ul li a{
             text-decoration: none;
-            color: white;
+            width: 100%;
+            display: inline-block;
+            word-break: break-word;
+        }
+        /* utility classes */
+        .blue-bg {
+            background-color: #0a7eaf7e;
+        }
+        .red{
+            color: #a32530;
+        }
+        .text-center{
+            text-align: center;
         }
 
-        nav a:active {
-            color: #666;
+        /* banner */
+        .main-banner {
+            margin: 0 auto;
+            min-height: 500px;
+            height: 100vh;
+            background-color: #b9b9b9;
+            overflow: hidden;
+            position: relative;
         }
+
+        .main-banner .img-ban {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transition: all ease-in-out 500ms;
+            -moz-transition: all ease-in-out 500ms;
+        }
+
+        /* text banner */
+        .banner-text {
+            position: relative;
+            margin: auto;
+            text-align: center;
+            height: 100%;
+            z-index: 1004;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 2em 3vh;
+        }
+        .banner-text p{
+            letter-spacing: .09rem;
+            word-spacing: .15em;
+            text-align: left
+        }
+        .banner-buttons {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+        /* footer */
+        footer{
+            min-height: 5em;
+            padding: 2em 0 0 0;
+        }
+        footer img{
+            margin: 1em;
+        }
+
+    
     </style>
-
 </head>
 
 <body>
     <!-- header -->
     <header>
-        <div class="logo grid">
-            <a id="logo-img" href="./index.html"><img src="./images/lider logo vergas vino alv sin fondo.png" alt="LIDER" width="150px"></a>
-            <div class="logo-title">LIDER</div>
-            <div class="logo-text text-center">Lasallistas Invirtiendo en Disciplina, Educacion y Respeto
-                <div id="social-media" class=" text-center">
-                    <a href="https://www.facebook.com/CUEFMM/" target="blank"><img src="./images/fb.webp" alt="LIDER facebook"></a>
-                    <a href="https://twitter.com/Lider_FMM" target="blank"><img src="./images/tw.webp" alt="LIDER Twitter"></a>
-                    <a href="https://www.instagram.com/lafmm_eslider/" target="blank"><img src="./images/ig.webp" alt="LIDER instagram"></a>
-                </div>
+        <div class="text-center">
+            <a id="logo-img" href="./index.html"><img src="./images/lider logo vergas vino alv sin fondo.png" alt="LIDER"
+                    width="140px"></a>
+            <div class="">L.I.D.E.R.</div>
+            <div id="slogan">Lasallistas Invirtiendo en Disciplina, Educacion y Respeto
             </div>
         </div>
-
-
-
-
-
-        <!-- navbar inside header-->
-        <nav>
-            <ul>
-                <li>
-                    <a href="#about">¿QUÉ ES LIDER?</a>
-                </li>
-                <li>
-                    <a href="./platform.html">Plataforma Interactiva</a>
-                </li>
-                <li>
-                    <a href="#contact">Contáctanos</a>
-                </li>
-                <li>
-                    <a href="#social">Social media </a>
-                    <!-- https://www.facebook.com/CUEFMM/ -->
-                </li>
-
-
-            </ul>
-        </nav>
+        <div id="social-media" class="text-center">
+            <a href="https://www.facebook.com/CUEFMM/" target="blank"><img src="./images/fb.webp" alt="LIDER facebook"></a>
+            <a href="https://twitter.com/Lider_FMM" target="blank"><img src="./images/tw.webp" alt="LIDER Twitter"></a>
+            <a href="https://www.instagram.com/lafmm_eslider/" target="blank"><img src="./images/ig.webp" alt="LIDER instagram"></a>
+        </div>
     </header>
 
+    <!-- navbar -->
+    <nav>
+        <h1 class="text-center">MENÚ</h1>
+        <ul>
+            <li>
+                <a href="#about">¿QUÉ ES LIDER?</a>
+            </li>
+            <li>
+                <a href="./platform.html">Plataforma Interactiva</a>
+            </li>
+            <li>
+                <a href="#contact">Contáctanos</a>
+            </li>
+            <li>
+                <a href="#social">Social media </a>
+            </li>
+        </ul>
+    </nav>
 
     <!-- about -->
     <!-- with slideshow together? -->
     <main id="about">
         <div class="main-banner" id="main-banner">
-
-
-            <div class="banner-text container grid">
-                <h1>Qué es <span id="lider">LIDER</span> ?</h1>
+            <div class="banner-text blue-bg container grid">
+                <h1>Qué es <span class="red">LIDER</span> ?</h1>
                 <p>LIDER nace con el fin de ofrecer una educación integral al estudiante de medicina de la Universidad
-                    LaSalle. Estamos convencidos que un estudiante sano, que confía en los conocimientos que le imparte
-                    su facultad y que está orgulloso de portar el escudo de la universidad, tendrá la capacidad de
+                    LaSalle.
+                    <br>
+                    <br>
+                    Estamos convencidos que un estudiante sano, que confía en los conocimientos que le imparte su
+                    facultad y que está orgulloso de portar el escudo de la universidad, tendrá la capacidad de
                     aprovechar las herramientas educativas que le brinda la facultad y por ende se lograrán mejores
                     resultados académicos y se compartirá el enfoque humanista que tanto caracteriza al médico
                     lasallista.</p>
@@ -140,33 +201,35 @@
 
     <!-- get in -->
 
-    <section id="get-in">
-        <div id="platform" class="box-container black-bg grid">
-            <div class="text-center full-height flex-col flex-justify-evenly flex-align-center">
+    <section id="get-in" class="red-bg">
+        <div id="platform" class="box-container black-bg">
+            <div id="enter-platform" class="flex-col justify-evenly align-center text-center">
                 <h2>PLATAFORMA INTERACTIVA</h2>
                 <p>Comprometidos con la excelencia.</p>
                 <button><a href="./platform.html">ingresa aquí</a></button>
             </div>
-            <img src="./images/estetos.webp" alt="" id="platform-image" class="full-height" width="100%">
+            <div id="img-esteto"></div>
         </div>
     </section>
+
     <!-- separator 1-->
     <div id="sep1" class="separator">
-        <div id="quote" class="box-container blue-bg">
+        <div id="quote" class="box-container blue-bg text-center">
             <img src="./images/lider circulo.webp" alt="" id="quote-img">
-            <blockquote>
+            <blockquote class="flex-col">
                 <q>El comienzo es la parte más importante de todo trabajo</q>
                 <cite>- Platón</cite>
             </blockquote>
         </div>
     </div>
+
     <!-- contact -->
-    <section id="contact" class="black-bg">
+    <section id="contact" class="black-bg flex-col">
         <div id="contact-box" class="red-bg box-container">
             <div class="contact-form">
                 <h2>Contáctanos</h2>
-                <form action="none" class="flex-col">
-                    <div class="form-required">
+                <form action="none" class="flex-col text-center">
+                    <div class="form-required flex-col">
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre *">
                         <input type="text" name="e-mail" id="e-mail" placeholder="E-mail *">
                     </div>
@@ -180,8 +243,9 @@
                 </form>
 
             </div>
+            <div id="img-esteto">
 
-            <img src="./images/estetos-l.webp" alt="Disciplina">
+            </div>
         </div>
 
 
@@ -190,7 +254,7 @@
     <!-- separator 2 -->
     <!-- footer -->
     <footer>
-        <div id="social" class=" text-center">
+        <div id="social" class="text-center">
             <a href="https://www.facebook.com/CUEFMM/" target="blank"><img src="./images/fb.webp" alt="LIDER facebook"></a>
             <a href="https://twitter.com/Lider_FMM" target="blank"><img src="./images/tw.webp" alt="LIDER Twitter"></a>
             <a href="https://www.instagram.com/lafmm_eslider/" target="blank"><img src="./images/ig.webp" alt="LIDER instagram"></a>

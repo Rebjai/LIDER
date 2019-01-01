@@ -5,140 +5,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>LIDER | Lasallistas Inviertiendo en Disciplina, Educacion y Respeto</title>
+    <title>LIDER | Lasallistas Invirtiendo en Disciplina, Educacion y Respeto</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="platform-styles.css">
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Roboto', "Helvetica Neue", Helvetica, sans-serif;
-            color: white;
-
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', "Helvetica Neue", Helvetica, sans-serif;
+        color: white;
         }
 
-        /* critical css */
         header {
             background-color: #157daa;
 
         }
-
-        nav {
-            width: 100%;
-            height: 3em;
-            background-color: rgba(0, 0, 0, 0.666);
-            justify-content: center;
-            align-items: center;
+        #slogan{
+            padding: 0 5vw;
+        }
+        #social-media img{
+            margin: 1em;
+        }
+        nav{
+            background-color: rgba(149, 2, 2, 0.794);
             position: sticky;
+            /* position: -webkit-sticky; */
+            top: 0;
+            padding: .5em 0;
+            z-index: 9999;
         }
 
-        nav ul {
-            height: 100%;
-            list-style: none;
+        nav h1{
+            display: block;
+            margin: 0 auto;
+        }
+        nav h1:hover + ul, nav h1 + ul:hover {
+            max-height: 300px;
+        }
+
+        nav ul{
             display: flex;
+            flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-            align-content: center;
+            list-style: none;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 200ms;
         }
-
-        nav li {
-            height: 100%;
-            display: flex;
-            align-items: center;
+        nav ul li{
+            width: 45%;
+            text-align: center;
+            padding: .5em 0;
         }
-
-        nav ul li:hover a {
-            color: #666;
-        }
-
-        nav a {
+        nav ul li a{
             text-decoration: none;
-            color: white;
+            width: 100%;
+            display: inline-block;
+            word-break: break-word;
+        }
+        /* utility classes */
+        .blue-bg {
+            background-color: #0a7eaf7e;
+        }
+        .red{
+            color: #a32530;
+        }
+        .text-center{
+            text-align: center;
         }
 
-        nav a:active {
-            color: #666;
+        /* banner */
+        .main-banner {
+            margin: 0 auto;
+            min-height: 500px;
+            height: 100vh;
+            background-color: #b9b9b9;
+            overflow: hidden;
+            position: relative;
         }
+
+        .main-banner .img-ban {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            transition: all ease-in-out 500ms;
+            -moz-transition: all ease-in-out 500ms;
+        }
+
+        /* text banner */
+        .banner-text {
+            position: relative;
+            margin: auto;
+            text-align: center;
+            height: 100%;
+            z-index: 1004;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 2em 3vh;
+        }
+        .banner-text p{
+            letter-spacing: .09rem;
+            word-spacing: .15em;
+            text-align: left
+        }
+        .banner-buttons {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+        /* footer */
+        footer{
+            min-height: 5em;
+            padding: 2em 0 0 0;
+        }
+        footer img{
+            margin: 1em;
+        }
+
+    
     </style>
-
 </head>
 
 <body>
     <!-- header -->
     <header>
-        <div class="logo grid">
+        <div class="text-center">
             <a id="logo-img" href="./index.html"><img src="./images/lider logo vergas vino alv sin fondo.png" alt="LIDER"
-                    width="150px"></a>
-
-            <div class="logo-title">LIDER</div>
-            <div class="logo-text text-center">Lasallistas Inviertiendo en Disciplina, Educacion y Respeto
-                <div id="social-media" class=" text-center">
-                    <a href="https://www.facebook.com/CUEFMM/" target="blank"><img src="./images/fb.webp" alt="LIDER facebook"></a>
-                    <a href="https://twitter.com/Lider_FMM" target="blank"><img src="./images/tw.webp" alt="LIDER Twitter"></a>
-                    <a href="https://www.instagram.com/lafmm_eslider/" target="blank"><img src="./images/ig.webp" alt="LIDER instagram"></a>
-                </div>
+                    width="140px"></a>
+            <div class="">L.I.D.E.R.</div>
+            <div id="slogan">Lasallistas Invirtiendo en Disciplina, Educacion y Respeto
             </div>
         </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./index.html#about">¿QUÉ ES LIDER?</a>
-                </li>
-                <li>
-                    <a href="#get-in">Plataforma Interactiva</a>
-                </li>
-                <li>
-                    <a href="./index.html#contact">Contáctanos</a>
-                </li>
-                <li>
-                    <a href="#social">Social media </a>
-                    <!-- https://www.facebook.com/CUEFMM/ -->
-                </li>
-
-
-            </ul>
-        </nav>
-    </header>
-    <!-- end header -->
-
-    <!-- cards -->
-    <section>
-        <div id="card-container" class="box-container ">
-            <div class="card-container">
-                <a class="card" href="#" rel="noopener noreferrer"><div class="card">MATERIAS BÁSICAS</div></a>
-                <a class="card" href="#"  rel="noopener noreferrer"><div class="card">MATERIAS CLÍNICAS</div></a>
-                <a class="card" href="https://mega.nz/#F!3AAH0RCK!PI-d9CqrLg4AdEkkUd9NDA" target="_blank" rel="noopener noreferrer"><div class="card">BIBLIOTECA DIGITAL</div></a>
-                <a class="card" href="#" target="_blank" rel="noopener noreferrer"><div class="card">EVENTOS</div></a>
-                <a class="card" href="#" target="_blank" rel="noopener noreferrer"><div class="card">LA SALLE MARKET</div></a>
-
-                
-                
-                
-                
-                
-            </div>
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- footer -->
-    <footer>
-        <div id="social" class=" text-center">
+        <div id="social-media" class="text-center">
             <a href="https://www.facebook.com/CUEFMM/" target="blank"><img src="./images/fb.webp" alt="LIDER facebook"></a>
             <a href="https://twitter.com/Lider_FMM" target="blank"><img src="./images/tw.webp" alt="LIDER Twitter"></a>
             <a href="https://www.instagram.com/lafmm_eslider/" target="blank"><img src="./images/ig.webp" alt="LIDER instagram"></a>
         </div>
-        <div class="blue-bg text-center">
-            <p>Created for LIDER. coded by <a href="https://github.com/rebjai">rebjai</a></p>
-        </div>
-    </footer>
-    <!-- this is the end, my dear friend, the end -->
-</body>
+    </header>
 
-</html>
+    <!-- navbar -->
+    <nav>
+        <h1 class="text-center">MENÚ</h1>
+        <ul>
+            <li>
+                <a href="./index.html#about">¿QUÉ ES LIDER?</a>
+            </li>
+            <li>
+                <a href="./platform.html">Plataforma Interactiva</a>
+            </li>
+            <li>
+                <a href="./index.html#contact">Contáctanos</a>
+            </li>
+            <li>
+                <a href="./index.html#social">Social media </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- cards -->
+    <section></section>
+    <!-- footer -->
+    <footer>
+            <div id="social" class="text-center">
+                <a href="https://www.facebook.com/CUEFMM/" target="blank"><img src="./images/fb.webp" alt="LIDER facebook"></a>
+                <a href="https://twitter.com/Lider_FMM" target="blank"><img src="./images/tw.webp" alt="LIDER Twitter"></a>
+                <a href="https://www.instagram.com/lafmm_eslider/" target="blank"><img src="./images/ig.webp" alt="LIDER instagram"></a>
+            </div>
+            <div class="blue-bg text-center">
+                <p>Created for LIDER. coded by <a href="https://github.com/rebjai">rebjai</a></p>
+            </div>
+        </footer>
+    
+        <!-- scripts -->
+        <script src="./slideshow.js"></script>
+    </body>
+    
+    </html>
