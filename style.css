@@ -41,6 +41,9 @@ button:hover {
     cursor: pointer;
     transform: scale(1.1)
 }
+h1, h1 span{
+    font-size: 1.5rem;
+}
 
 input,
 textarea {
@@ -87,13 +90,15 @@ section {
     display: flex;
     flex-direction: column;
 }
-
 .align-center{
     align-items: center;
 }
 
 .justify-evenly {
     justify-content: space-evenly;
+}
+.self-center{
+    align-self: center;
 }
 
 #enter-platform {
@@ -103,6 +108,7 @@ section {
 
 #img-esteto {
     min-height: 30vh;
+    width: 100%;
     height: 40%;
     background-image: url(./images/estetos-l.webp);
     background-repeat: no-repeat;
@@ -118,7 +124,7 @@ section {
     height: 100%;
 }
 
-@media only screen and (min-width: 650px) {
+@media all and (min-width: 650px) {
     nav h1 {
         display: none;
     }
@@ -126,16 +132,17 @@ section {
         flex-direction: row;
         max-height: inherit;
     }
-    button {
-        padding: .1em 2.5em;
-        margin: .5em 2em;
-        transition: transform 200ms;
-        font-size: 2.5vw;
-        font-weight: 900;
-        /* max-width: 30vw; */
+    h1, h1 span{
+        font-size: 2.5rem;
     }
-    .banner-text{
-        padding: 10vw;
+    h2{
+        font-size: 2rem;
+    }
+    p, a, q , cite{
+        font-size: 1.5rem;
+    }
+    blockquote{
+        font-size: 3rem
     }
     .box-container {
         width: 80%;
@@ -144,7 +151,32 @@ section {
     #quote {
         height: fit-content;
     }
+    button {
+        padding: .2em .82em;
+        margin: .5em 2em;
+        transition: transform 200ms;
+        font-size: 2rem;
+        font-weight: 900;
+        max-width: 30vw;
+    }
+    button a{
+        font-size: 2rem;
+    }
+    .banner-text{
+        padding: 10vw;
+    }
     .banner-buttons{
-        flex-direction: row !important;
+        flex-direction: row;
+    }
+    #brand-title{
+        font-size: 1.5rem;
+    }
+    #slogan{
+        font-size: 1.3rem;
+    }
+    .contact-form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 }

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LIDER | Lasallistas Invirtiendo en Disciplina, Educacion y Respeto</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- critical css first and then general css -->
     <style>
         * {
         margin: 0;
@@ -15,6 +15,7 @@
         box-sizing: border-box;
         font-family: 'Roboto', "Helvetica Neue", Helvetica, sans-serif;
         color: white;
+        font-size: 16px;
         }
 
         header {
@@ -128,6 +129,7 @@
 
     
     </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -136,7 +138,7 @@
         <div class="text-center">
             <a id="logo-img" href="./index.html"><img src="./images/lider logo vergas vino alv sin fondo.png" alt="LIDER"
                     width="140px"></a>
-            <div class="">L.I.D.E.R.</div>
+            <div id="brand-title">L.I.D.E.R.</div>
             <div id="slogan">Lasallistas Invirtiendo en Disciplina, Educacion y Respeto
             </div>
         </div>
@@ -170,7 +172,7 @@
     <!-- with slideshow together? -->
     <main id="about">
         <div class="main-banner" id="main-banner">
-            <div class="banner-text blue-bg container grid">
+            <div class="banner-text blue-bg ">
                 <h1>Qué es <span class="red">LIDER</span> ?</h1>
                 <p>LIDER nace con el fin de ofrecer una educación integral al estudiante de medicina de la Universidad
                     LaSalle.
@@ -239,7 +241,7 @@
                         <input type="text" name="asunto" id="asunto" placeholder="asunto">
                     </div>
                     <textarea name="message" id="message" placeholder="Mensaje" cols="30" rows="10"></textarea>
-                    <button>Enviar</button>
+                    <button class="self-center">Enviar</button>
                 </form>
 
             </div>
