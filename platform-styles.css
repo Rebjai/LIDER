@@ -1,18 +1,76 @@
+/* images */
+#m-basicas{
+    background-image: url(./images/MATERIAS\ BASICAS.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#m-clinicas{
+    background-image: url(./images/MATERIAS\ CLINICAS.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#b-digital{
+    background-image: url(./images/BIBLIOTECA\ DIGITAL.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#eventos{
+    background-image: url(./images/EVENTOS.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#l-market{
+    background-image: url(./images/LA\ SALLE\ MARKET.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* end images */
+
 .card-container {
     width: 70%;
+    /* height: 100vh; */
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-auto-rows: 1fr;
     justify-items: center;
-    grid-gap: .5em;
-
 }
 .card{
-    min-height: 10rem;
+    height: 25vmax;
+    max-height: 300px;
+    max-width: 50vmax;
     width: 100%;
-    background: #000;
+    background: rgb(105, 105, 105);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 50ms ease-in-out;
+}
+.card:hover{
+    transform: scale(1.03);
+}
+
+
+@media all and (min-width: 650px) {
+    .card-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .card{
+        max-height: 200px;
+    }
+
+}
+@media all and (min-width: 1050px) {
+    .card-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card{
+        max-height: 200px;
+    }
+
 }

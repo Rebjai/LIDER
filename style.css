@@ -49,6 +49,7 @@ input,
 textarea {
     margin: .5em 0em;
     padding: .5em;
+    resize: none;
 }
 
 section {
@@ -118,6 +119,12 @@ section {
 #sep1 {
     background-image: url(./images/mri.webp);
     min-height: 200px;
+}
+#social-media img{
+    transition: transform 100ms ease-in-out;
+}
+#social-media img:hover{
+    transform: scale(1.2);
 }
 
 #quote {
